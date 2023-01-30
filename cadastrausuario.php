@@ -12,12 +12,12 @@
             $cont = $tbl[0];
         }
         if($cont == 1){
-            echo"<script>window.alert('USUARIO JÁ CADASTRADO')";
+            echo"<script>window.alert('USUARIO JÁ CADASTRADO');</script>";
         }
         else{
             $sql = "INSERT INTO usuarios(use_nome, use_senha) VALUES('$nome', '$senha')";
             mysqli_query($link, $sql);
-            header("Location: listausuarios.php");
+            header("Location: listausuario.php");
         }
     }
 ?>
