@@ -1,4 +1,5 @@
 <?php
+// coleta as variaveis do name do html e abre uma conexção com o banco
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
@@ -11,6 +12,7 @@
         while ($tbl = mysqli_fetch_array($resultado)){
             $cont = $tbl[0];
         }
+        // VERIFICA SE O USUARIO EXISTE
         if($cont == 1){
             echo"<script>window.alert('USUARIO JÁ CADASTRADO');</script>";
         }
@@ -33,7 +35,7 @@
         
     </head>
     <body>
-        <a href="homesistema.php"><input type="button" id="menuhome" value="HOME SISTEMA"></a>
+        <a href="homesistema.html"><input type="button" id="menuhome" value="HOME SISTEMA"></a>
         <div>
              <!-- SCRIPT PARA MOSTRAR SENHA -->
              <script>

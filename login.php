@@ -1,18 +1,23 @@
 <?php 
- 
-      if($_SERVER['REQUEST_METHOD']=="POST"){
-        $nome = $_POST['nome'];
-        $password = $_POST['password'];
-        Include("conectadb.php");   
+    
+    # PRIMEIRA CAPTURA UTILIZANDO O METHOD POST
+    #
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+        $nome = $_POST['nome'];#captura variavel que esta no nome = "password" html
+        $password = $_POST['password'];#
+        Include("conectadb.php");  #Include chama a conexão com o banco no script conectadb.php
+
         //CONSULTA SQL PARA VERIFICAR USUARIO CADASTRADO
-        //use = usu
+        //use == usu
         $sql = "SELECT COUNT(use_id) FROM usuarios WHERE use_nome= '$nome' AND use_senha= '$password'";
+        
         $resultado = mysqli_query($link, $sql);
 
         while ($tbl = mysqli_fetch_array($resultado)){
             $cont = $tbl[0];
         }  
-        if($cont==1){
+        #VERIFICA SE O VALOR DO CONT É 0 OU 1 
+        if($cont==1){# cont armazena um valor da coluna
             header("Location: homesistema.html");
         }
         else{

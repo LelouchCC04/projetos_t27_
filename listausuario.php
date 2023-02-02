@@ -1,5 +1,7 @@
 <?php
+#ABRI CONEXÃO COM BANCO DE DADOS
 include("conectadb.php");
+
 $sql = "SELECT * FROM usuarios";
 $resultado = mysqli_query($link, $sql);
 ?>
@@ -19,7 +21,7 @@ $resultado = mysqli_query($link, $sql);
 
 <body>
 
-    <a href="homesistema"><input type="button" id="nebuhone" value="MENUHOME"></a>
+    <a href="homesistema.html"><input type="button" id="nebuhone" value="MENUHOME"></a>
     <div class="container">
         <table style="border: 1px solid #fff;">
             <tr>
@@ -31,9 +33,10 @@ $resultado = mysqli_query($link, $sql);
                 while ($tbl = mysqli_fetch_array($resultado)){
                    ?>
                     <tr>
-                        <td><?=$tbl[1]?></td>
-                        <td><a href="alterarusuario.php?id=<?$tbl[0]?>"><input type="button" value="ALTERAR"></a></td>
-                        <td><a href="excluirusuario.php?id=<?$tbl[0]?>"><input type="button" value="EXCLUIR"></a></td>
+                        
+                        <td><?=$tbl[1]?></td><!-- TRAS SOMENTE A COLUNA NOME DA TABELA -->
+                        <td><a href="alterarusuario.php?id=<?=$tbl[0]?>"><input type="button" value="ALTERAR"></a></td>
+                        <td><a href="excluirusuario.php?id=<?=$tbl[0]?>"><input type="button" value="EXCLUIR"></a></td>
                     </tr>
                     <?php
                 }

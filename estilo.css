@@ -2,7 +2,7 @@ body {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(111, 0, 255);
+    background-color: rgb(99, 36, 180);
     color: #eee;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,6 +44,7 @@ form {
     border-radius: 20px;
     padding: 15px;
     width: 550px;
+    margin-left: 180px;
 }
 
 form label {
@@ -64,6 +65,11 @@ form input[value="Sim"] {
     width: 200px;
     margin-left: 74px;
 }
+#botao{
+    width: 200px;
+    margin-left: 350px;
+}
+
 
 div #btnnao {
     position: relative;
