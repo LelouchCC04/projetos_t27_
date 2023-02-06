@@ -36,7 +36,9 @@ $resultado = mysqli_query($link, $sql);
                         
                         <td><?=$tbl[1]?></td><!-- TRAS SOMENTE A COLUNA NOME DA TABELA -->
                         <td><a href="alterarusuario.php?id=<?=$tbl[0]?>"><input type="button" value="ALTERAR"></a></td>
-                        <td><a href="excluirusuario.php?id=<?=$tbl[0]?>"><input type="button" value="EXCLUIR"></a></td>
+                        <!-- <td><a href="excluirusuario.php?id="><input type="button" value="EXCLUIR"></a></td> -->
+                        <td><?=$tbl[3]?></td>
+                        
                     </tr>
                     <?php
                 }

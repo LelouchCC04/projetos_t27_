@@ -45,6 +45,8 @@ form {
     padding: 15px;
     width: 550px;
     margin-left: 180px;
+    text-align: justify;
+   
 }
 
 form label {
@@ -53,7 +55,7 @@ form label {
 }
 
 form input {
-    width: 400px;
+    width: 200px;
 }
 
 form input[type="submit"] {
@@ -65,6 +67,7 @@ form input[value="Sim"] {
     width: 200px;
     margin-left: 74px;
 }
+
 #botao{
     width: 200px;
     margin-left: 350px;
